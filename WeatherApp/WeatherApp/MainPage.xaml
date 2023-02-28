@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WeatherApp.MainPage"
+             Loaded="ContentPage_Loaded">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1.5*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Row="0" Grid.Column="0">
+            <Image x:Name="WeatherIcon"/>
+        </Grid>
+
+        <Grid Grid.Row="0" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Label x:Name="MaxTemp" 
+               Grid.Row="0"
+               Text="Max"
+               FontSize="50"
+               HorizontalTextAlignment="Center"
+               VerticalTextAlignment="Center"/>
+
+            <Label x:Name="MinTemp"
+               Grid.Row="1"
+               Text="Min"
+               FontSize="50"
+               HorizontalTextAlignment="Center"
+               VerticalTextAlignment="Center"/>
+        </Grid>
+
+
+
+        <Grid Grid.Row="1"
+              Grid.ColumnSpan="2">
+            <Label x:Name="Overall"
+                   Text="Weather"
+                   FontSize="25"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"/>
+            <Label x:Name="UpdateTime"
+                   HorizontalOptions="End"
+                   VerticalTextAlignment="End"/>
+        </Grid>
+    </Grid>
+</ContentPage>
